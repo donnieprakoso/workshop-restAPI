@@ -1,6 +1,6 @@
 ## 🚀 Workshop — Building REST APIs with AWS
 
-In this workshop, you will build and deploy a REST API using Amazon API Gateway, AWS Lambda, and AWS CDK (and a bit of Amazon DynamoDB).
+In this workshop, you will build and deploy REST APIs using Amazon API Gateway, AWS Lambda, and AWS CDK (and a bit of Amazon DynamoDB).
 The main objective of this workshop is to build a foundation of understanding how to implement REST API with AWS and also how to adopt IaC for reusable APIs.
 
 The content of this workshop will be updated regularly and if you have questions or find issues in this workshop, please file them as an Issue.
