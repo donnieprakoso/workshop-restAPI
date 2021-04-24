@@ -158,11 +158,11 @@ pip install boto3
 - Create a file named `requirements.txt`. This is a standard method to install any dependencies for Python applications. 
 - Add these lines:
 ```
-aws-cdk.core==1.70.0
-aws-cdk.aws-iam==1.70.0
-aws-cdk.aws-lambda==1.70.0
-aws-cdk.aws-apigateway==1.70.0
-aws-cdk.aws-dynamodb==1.70.0
+aws-cdk.core==1.96.0
+aws-cdk.aws-iam==1.96.0
+aws-cdk.aws-lambda==1.96.0
+aws-cdk.aws-apigateway==1.96.0
+aws-cdk.aws-dynamodb==1.96.0
 ```
 - Install the libraries by executing:
 ```bash

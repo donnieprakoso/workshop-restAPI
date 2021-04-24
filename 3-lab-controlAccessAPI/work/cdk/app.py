@@ -2,7 +2,6 @@
 
 from aws_cdk import aws_iam as _iam
 from aws_cdk import aws_lambda as _lambda
-from aws_cdk import aws_dynamodb as _ddb
 from aws_cdk import aws_apigateway as _ag
 from aws_cdk import core
 

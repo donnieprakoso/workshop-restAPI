@@ -1,9 +1,9 @@
 # Lab 3: Defining Access Control for REST API Using Lambda Authorizer
-A Lambda authorizer uses a Lambda function to control access to API in Amazon API Gateway. This particular feature is useful if you want to implement a custom authorization scheme that uses a bearer token authentication strategy.
+A Lambda authorizer uses a Lambda function to control access to API in Amazon API Gateway. This particular feature is useful if you want to implement a custom authorization scheme that uses a bearer token authorization strategy.
 
 There are two types of Lambda authorizers, 1) Token Authorizer and 2) Request Authorizer. Token Authorizer uses bearer token in form of JWT or OAuth token and the Request Authorizer uses combination of headers, query string parameters, stageVariables, and $context variables.
 
-In this lab, you will build a basic API that needs to be secured by Lambda Authorizer using token. The token takes form of JWT. Please be noted that in this lab we will not cover authentication and authorizatio platform. 
+In this lab, you will build a basic API that needs to be secured by Lambda Authorizer using token. The token takes form of JWT. Please be noted that in this lab we will not cover authentication and authorization platform. 
  
 You will learn how to use Lambda Authorizer and how to integrate with Amazon API Gateway using AWS CDK, to control the access of your API. 
 
@@ -127,7 +127,7 @@ cdk deploy
 
 #### ⚠️ Time for Testing ⚠️
 - For testing, we're going to do 2 scenarios:
-    1. Using random string as the authentication token — which will make the requests failed
+    1. Using random string as the authorization token — which will make the requests failed
     2. Using JWT token which will led to successful request
 
 #### ⚠️ Wait, what JWT token? ⚠️
@@ -142,7 +142,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwidXNlcl9pZCI6InV
 - Open terminal
 - Execute this command:
 ```bash
-curl -H "Authentication: THIS_IS_A_RANDOM_STRING" <https://your-api-endpoint>
+curl -H "Authorization: THIS_IS_A_RANDOM_STRING" <https://your-api-endpoint>
 ```
 - If you see the following response, then your authorizer works correctly
 ```json
@@ -153,7 +153,7 @@ curl -H "Authentication: THIS_IS_A_RANDOM_STRING" <https://your-api-endpoint>
 - Open terminal
 - Execute this command:
 ```bash
-curl -H "Authentication: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwidXNlcl9pZCI6InVzZXItdGVzdC1qd3QiLCJpYXQiOjE1MTYyMzkwMjJ9.c9BqfJp04T9E3ulM97ruVmedwhT4AWyGfL3dPCSrSr4" <hhttps://your-api-endpoint>
+curl -H "Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwidXNlcl9pZCI6InVzZXItdGVzdC1qd3QiLCJpYXQiOjE1MTYyMzkwMjJ9.c9BqfJp04T9E3ulM97ruVmedwhT4AWyGfL3dPCSrSr4" <https://your-api-endpoint>
 ```
 - If you see the following response, then your authorizer works correctly. 
 ```json
